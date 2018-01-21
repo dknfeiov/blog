@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # blog
 
-> blog
+> personal blog
 
 ## Build Setup
 

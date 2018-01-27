@@ -39,11 +39,11 @@
     </div>
 
 
-    <div class="describe">  
+    <div class="describe">
         <div class="tip">
-            <img src="../assets/footprint-left.png"> 
+            <img src="../assets/footprint-left.png">
             <span>个人简介</span>
-            <img src="../assets/footprint-right.png"> 
+            <img src="../assets/footprint-right.png">
         </div>
         <div class="content">
             其实当时在互联网界已经有过一些统一样式表语言的建议了，但CSS是第一个含有“层叠”丰意的样式表语言。在CSS中，一个文件的样式可以从其他的样式表中继承。读者在有些地方可以使用他自己更喜欢的样式，在其他地方则继承或“层叠”作者的样式。这种层叠的方式使作者和读者都可以灵活地加入自己的设计，混合每个人的爱好。
@@ -53,9 +53,9 @@
 
     <div class="skill">
         <div class="tip">
-            <img src="" alt=""> 
+            <img src="" alt="">
             <span>掌握技能</span>
-            <img src="" alt=""> 
+            <img src="" alt="">
         </div>
         <div class="skill-content">
             <div class="skill-item">
@@ -64,7 +64,7 @@
                         Java
                         <div class="shadow"></div>
                     </div>
-                    
+
                 </div>
                 <div class="text">JavaScript</div>
             </div>
@@ -84,13 +84,13 @@
 </template>
 
 
-<style lang="scss" scoped>
+<style lang="scss" scoped type="text/scss">
     .box-container {
         position: relative;
         width: 1000px;
         margin: 0 auto;
         padding-top: 70px;
-        
+
     }
     .box-container:before {
         position: absolute;
@@ -145,10 +145,10 @@
                     display: inline-block;
                     font-size:22px;
                     transform:rotate(90deg);
-                    /* -ms-transform:rotate(90deg);    
-                    -moz-transform:rotate(90deg);   
-                    -webkit-transform:rotate(90deg); 
-                    -o-transform:rotate(90deg);  */    
+                    /* -ms-transform:rotate(90deg);
+                    -moz-transform:rotate(90deg);
+                    -webkit-transform:rotate(90deg);
+                    -o-transform:rotate(90deg);  */
                 }
             }
             .four{
@@ -178,14 +178,14 @@
                 line-height:20px;
                 color:#23415d;
             }
-            
+
         }
 
         .info-item:not(:first-of-type){
             margin-top:24px;
         }
 
-        
+
     }
 
 
@@ -248,7 +248,7 @@
                             background-color:white;
                         }
                     }
-                    
+
                 }
                 .text{
                     margin-top:30px;

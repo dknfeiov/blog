@@ -31,7 +31,7 @@
 </template>
 
 
-<style lang="scss" scoped>
+<style lang="scss" scoped type="text/scss">
     .box-container{
         width:1000px;
         margin:0 auto;
@@ -100,7 +100,7 @@
 
             }
 
-            
+
         }
         img{
             width:208px;

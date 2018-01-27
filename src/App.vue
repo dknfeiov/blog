@@ -21,7 +21,7 @@
           <router-link class="nav-item" active-class="active" to="/aboutMe">关于我</router-link>
         </div>
       </div>
-      
+
 
       <router-view/>
     </div>
@@ -30,7 +30,7 @@
 </template>
 
 
-<style lang="scss">
+<style lang="scss" type="text/scss">
 
   * {
     box-sizing:border-box;
@@ -83,7 +83,7 @@
               // left: -20px;
               // border-right: 20px solid transparent;
               // -webkit-filter: drop-shadow(20px 0);
-              // filter: drop-shadow(20px 0); 
+              // filter: drop-shadow(20px 0);
             }
         }
         &:after{

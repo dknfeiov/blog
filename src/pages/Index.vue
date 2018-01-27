@@ -22,7 +22,7 @@
             <img src="../assets/cat-compute.png">
             <div class="text">技术文章</div>
         </div>
-        
+
         <div class="article-list">
             <div class="article">
                 <div class="article-title">
@@ -173,14 +173,14 @@
 
 
 </div>
-    
+
 
 
 
 </template>
 
 
-<style scoped lang="scss">
+<style scoped lang="scss" type="text/scss">
 
     .box-container{
         width:1000px;
@@ -385,7 +385,7 @@
     }
 
 
-    // 随笔 
+    // 随笔
     .eaasy-list{
         .essay{
             .essay-date{
@@ -441,7 +441,7 @@
         }
     }
 
-    
+
 
 </style>
 

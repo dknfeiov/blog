@@ -3,7 +3,7 @@
 </template>
 
 
-<style lang="scss" scoped>
+<style lang="scss" scoped type="text/scss">
 
 </style>
 

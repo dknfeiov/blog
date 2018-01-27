@@ -1,0 +1,39 @@
+{
+  "code": 200,
+  "msg": "",
+  "data": {
+    "list": [
+      {
+        "userName": "张二狗",
+        "userIcon": "/static/tx3.jpg",
+        "date": "2018-02-01",
+        "content": "随我一道除暴安良！"
+      },
+      {
+        "userName": "流风若水",
+        "userIcon": "/static/tx1.jpg",
+        "date": "2017-03-24",
+        "content": "今天天气不错！",
+        "children": [
+          {
+            "userName": "上尚若水",
+            "userIcon": "/static/tx2.jpg",
+            "date": "2017-03-24",
+            "content": "我们名字好像啊！"
+          },
+          {
+            "userName": "流风若水",
+            "userIcon": "/static/tx1.jpg",
+            "date": "2017-03-25",
+            "content": "是啊，好巧啊，哈哈哈哈！"
+          }
+        ]
+      }
+    ],
+    "page": {
+      "currPage": 1,
+      "pageSize": 10,
+      "totalPage": 2
+    }
+  }
+}

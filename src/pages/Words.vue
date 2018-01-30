@@ -10,11 +10,15 @@
         <textarea placeholder='your idea' v-model="info.content"></textarea>
         <div class='face'>
           <img src='../assets/emoj.png' alt=''>
-          <span>添加表情</span>
+          <span @click="modalVisible=true">添加表情</span>
+          <!-- @select="selectEmoji" -->
+          <vue-emoji v-if="modalVisible"></vue-emoji>
         </div>
         <button @click='addWords();'>喵喵</button>
       </div>
     </div>
+
+    
 
     <!-- 留言列表 -->
     <Comment :list="list" :page="page"></Comment>
@@ -25,13 +29,15 @@
 
 <script>
   import Comment from '@/components/comment'
+  import vueEmoji from '@/components/emoji'
   export default {
     name: 'Words',
     components: {
-      Comment
+      Comment, vueEmoji
     },
     data () {
       return {
+        modalVisible: false,
         info: {
           userName: '赵雅尼萨',
           userIcon: '/static/tx3.jpg',
@@ -101,9 +107,9 @@
         border: 1px solid #ddd;
       }
       .face {
+        position: relative;
         display: inline-block;
         img {
-
           margin-top: 12px;
           width: 20px;
           height: 20px;
@@ -112,6 +118,9 @@
           margin-left: 5px;
           font-size: 16px;
           color: #b2b2b2;
+        }
+        .emoji{
+          
         }
       }
       button {

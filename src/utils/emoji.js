@@ -23,5 +23,11 @@ export function emoji (value) {
 function createIcon (item) {
   const value = emojiData[item]
   const path = './static/emoji/'
+  // const img = document.createElement('img')
+  // img.src = path + value
+  // img.width = '16px';
+  // img.height = '16px'
+  // return img
   return `<img src=${path}${value} width="16px" height="16px">`
+  
 }

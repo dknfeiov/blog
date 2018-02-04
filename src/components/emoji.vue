@@ -3,7 +3,7 @@
     <ul class="emoji-controller">
       <li 
         v-for="(pannel,index) in pannels" 
-        @click="changeActive(index)"
+        @click="changeActive(index,$event)"
         :class="{'active': index === activeIndex}">{{ pannel }}</li>
     </ul>
     <ul class="emoji-container">
@@ -15,7 +15,7 @@
         <a 
           href="javascript:;" 
           v-for="(emoji, index) in emojiGroup"  
-          :key="index" @click="selectItem(emoji)">
+          :key="index" @click="selectItem(emoji,$event)">
            <span 
               class="emoji-item"
               :title="emoji"
@@ -38,14 +38,16 @@ export default {
     }
   },
   methods: {
-    changeActive (index) {
+    changeActive (index, event) {
       this.activeIndex = index
+      event.stopPropagation()
     },
     getPureName (name) {
       return name.replace(/:/g, '')
     },
-    selectItem (emoji) {
+    selectItem (emoji, event) {
       this.$emit('select', emoji)
+      event.stopPropagation()
     }
   },
   computed: {

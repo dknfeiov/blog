@@ -7,10 +7,10 @@
               <div class="info">
                 <div class="title">我学习Android的一些技巧</div>
                 <div class="legend">
-                        <span>2015-01-09</span>
-                        <span>15:20:21</span>
-                        <span class="read">188888</span>
-                        <span class="words">8883</span>
+                    <span>2015-01-09</span>
+                    <span>15:20:21</span>
+                    <span class="read">188888</span>
+                    <span class="words">8883</span>
                 </div>
                 <div class="content">今天更大家分享一卡一些学习的方法，我学习Android的一些技巧,注意 IE7和更早的版本不支持"继承"的值。 IE8需要定义！DOCTYPE。 IE9支持"继承"。</div>
                 <div class="complete">

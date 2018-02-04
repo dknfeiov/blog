@@ -14,7 +14,7 @@
           <div class='words-detail'>
             <span class='name'>{{item.userName}}</span>
             <span class='date'>{{item.date}}</span>
-            <div class='content'>{{item.content}}</div>
+            <div class='content' v-html="item.content"></div>
           </div>
           <!-- 留言的评论 -->
           <div class='words-item comment-box' v-for='child in item.children'>
@@ -23,7 +23,7 @@
               <div class='words-detail'>
                 <span class='name'>{{child.userName}}</span>
                 <span class='date'>{{child.date}}</span>
-                <div class='content'>{{child.content}}</div>
+                <div class='content' v-html="child.content"></div>
               </div>
             </div>
           </div>

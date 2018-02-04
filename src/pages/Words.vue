@@ -7,18 +7,18 @@
     <div class='words'>
       <div class='tip'>留下你的喵语</div>
       <div class='content'>
-        <textarea placeholder='your idea' v-model="info.content"></textarea>
-        <div class='face'>
-          <img src='../assets/emoj.png' alt=''>
-          <span @click="modalVisible=true">添加表情</span>
-          <!-- @select="selectEmoji" -->
-          <vue-emoji v-if="modalVisible"></vue-emoji>
+        <!-- XSS @TODO -->
+        <!-- v-html="info.content" -->
+        <div class="input" id='input' contenteditable="true" @input="inputChange($event);"></div>
+        <!-- <textarea placeholder='your idea' v-model="info.content"></textarea> -->
+        <div class='face' @click="modalVisible=true">
+          <img src='../assets/emoj.png'>
+          <span >添加表情</span>
+          <vue-emoji v-if="modalVisible" @select="selectEmoji($event)" v-clickoutside='hide'></vue-emoji>
         </div>
         <button @click='addWords();'>喵喵</button>
       </div>
     </div>
-
-    
 
     <!-- 留言列表 -->
     <Comment :list="list" :page="page"></Comment>
@@ -30,10 +30,16 @@
 <script>
   import Comment from '@/components/comment'
   import vueEmoji from '@/components/emoji'
+  import clickoutside from '@/utils/clickoutside'
+  import moment from 'moment'
+  // import * as emojiApi from '@/utils/emoji'
   export default {
     name: 'Words',
     components: {
       Comment, vueEmoji
+    },
+    directives: {
+      clickoutside
     },
     data () {
       return {
@@ -59,9 +65,31 @@
         })
       },
       addWords: function () {
+        moment.locale()
         this.list.push(Object.assign({
-          date: new Date()
+          date: moment(new Date()).format('YYYY-MM-DD')
         }, this.info))
+      },
+      hide: function () {
+        this.modalVisible = false
+      },
+      selectEmoji: function (event) {
+        // const img = emojiApi.emoji(event)
+        event = event.replace(/:/g, '')
+        // const div = `<div class="sprite-${event}" contenteditable="false"></div>`
+        const div = document.createElement('div')
+        div.classList.add(`sprite-${event}`)
+        div.contentEditable = false
+        const input = document.querySelector('#input')
+        input.appendChild(div)
+        // this.info.content += div
+        this.info.content = input.innerHTML
+        console.log(this.info.content)
+        this.hide()
+      },
+      inputChange: function (event) {
+        const value = event.target.innerHTML
+        this.info.content = value
       }
     },
     created: function () {
@@ -93,7 +121,7 @@
       position: relative;
       width: 100%;
       margin-top: 60px;
-      textarea {
+      .input {
         background-color: #f4f4f4;
         height: 100px;
         width: 100%;
@@ -103,13 +131,15 @@
         font-size: 16px;
         color: #b2b2b2;
       }
-      textarea:focus {
+      .input:focus {
         border: 1px solid #ddd;
+        // outline: 0px;
       }
       .face {
         position: relative;
         display: inline-block;
         img {
+          vertical-align: bottom;
           margin-top: 12px;
           width: 20px;
           height: 20px;
@@ -118,9 +148,6 @@
           margin-left: 5px;
           font-size: 16px;
           color: #b2b2b2;
-        }
-        .emoji{
-          
         }
       }
       button {
@@ -133,6 +160,9 @@
         background-color: #63ae9f;
         color: #fff;
         text-align: center;
+      }
+      button:hover {
+        border:1px solid #ddd;
       }
     }
     .content::before {

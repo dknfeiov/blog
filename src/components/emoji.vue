@@ -61,7 +61,6 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-@import '../assets/scss/emoji-sprite.scss';
 
 ul,li {
     padding:0px;

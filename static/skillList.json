@@ -1,0 +1,43 @@
+{
+    "code": 200,
+    "msg": "",
+    "data": {
+        "list": [
+            {
+                "name": "Java",
+                "tip": "JAVA",
+                "degree": 80
+            },
+            {
+                "name": "JS",
+                "tip": "JavaScript",
+                "degree": 70
+            },
+            {
+                "name": "Python",
+                "tip": "Python",
+                "degree": 82
+            },
+            {
+                "name": "Linux",
+                "tip": "Linux",
+                "degree": 85
+            },
+            {
+                "name": "Http",
+                "tip": "Http",
+                "degree": 70
+            },
+            {
+                "name": "C++",
+                "tip": "C++",
+                "degree": 65
+            },
+            {
+                "name": "Mysql",
+                "tip": "Mysql",
+                "degree": 90
+            }
+        ]
+    }
+}

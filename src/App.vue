@@ -33,6 +33,7 @@
 <style lang="scss" >
 
   @import 'assets/scss/emoji-sprite.scss';
+  @import 'assets/scss/font-define.scss';
   * {
     box-sizing:border-box;
   }
@@ -43,12 +44,17 @@
       padding-top:25px;
       height:200px;
       .title{
-        font-size:81px;
+          font-family: wyjzfs;
+          line-height: 101px;
+          font-size: 81px;
+          font-weight: bold;
         span{
+          font-weight: normal;
           color:rgba(128, 128, 128, 0.904);
         }
       }
       .welcome{
+        font-family: hylmt;
         font-size:20px;
         color:rgba(143, 136, 136, 0.281);
       }
